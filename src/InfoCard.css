@@ -1,0 +1,50 @@
+.info-card-title {
+  margin: 32px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.info-card-description {
+  margin-bottom: 25px;
+}
+
+.info-card-technologies {
+  margin-bottom: 25px;
+}
+
+.info-card-technologies ul {
+  padding-inline-start: 30px;
+}
+
+.info-card-link {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+}
+.link-icon {
+  width: 14px;
+  height: 14px;
+  filter: invert(92%) sepia(89%) saturate(239%) hue-rotate(296deg)
+    brightness(115%) contrast(101%);
+  opacity: 0.95;
+}
+
+.link-icon.light {
+  filter: invert(3%) sepia(2%) saturate(4651%) hue-rotate(202deg)
+    brightness(105%) contrast(85%);
+}
+
+.link-url {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-url:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+  transition: 200ms;
+}
+
+.link-url:visited {
+  color: inherit;
+}
