@@ -2,6 +2,9 @@ import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import "./App.css";
 import InfoCard from "./InfoCard";
+import arrowIcon from "./assets/arrow.svg";
+import lightIcon from "./assets/light_icon.svg";
+import darkIcon from "./assets/dark_icon.svg";
 
 function App() {
   const localDarkMode = localStorage.getItem("DARK_MODE");
@@ -48,7 +51,7 @@ function App() {
     >
       <span className="work-title">{work.title}</span>
       <img
-        src="./src/assets/arrow.svg"
+        src={arrowIcon}
         className={
           "work-arrow " +
           (work.id === selectedWork.id ? "open" : "close") +
@@ -59,8 +62,6 @@ function App() {
   ));
 
   const displaySelectedWork = (work) => {
-    console.log(work.id);
-    console.log(selectedWork.id);
     if (work.id === selectedWork.id) {
       setInfoCardVisibility(false);
       setSelectedWork((oldWork) => {
@@ -91,9 +92,7 @@ function App() {
           </span>
           <span>
             <img
-              src={
-                "./src/assets/" + (isDarkMode ? "light" : "dark") + "_icon.svg"
-              }
+              src={isDarkMode ? lightIcon : darkIcon}
               className={"theme-icon" + (!isDarkMode ? " light" : "")}
               onClick={handleThemeChange}
             />

@@ -1,4 +1,6 @@
 import "./InfoCard.css";
+import linkIcon from "./assets/link.svg";
+
 export default function InfoCard({ data, darkMode }) {
   return (
     <div className="info-card">
@@ -14,7 +16,7 @@ export default function InfoCard({ data, darkMode }) {
       </div>
       <div className="info-card-link">
         <img
-          src="./src/assets/link.svg"
+          src={linkIcon}
           className={"link-icon" + (!darkMode ? " light" : "")}
         />
         <a href={data.link} className="link-url" target="_blank">
